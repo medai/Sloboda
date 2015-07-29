@@ -1,0 +1,2 @@
+module MyFirstPageHelper
+end
