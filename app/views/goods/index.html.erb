@@ -1,0 +1,20 @@
+<h1>Товары</h1>
+
+<%=  'тут пишеться команда rails' %>
+
+<p>Товаров на складе <%= @goods_count %></p>
+ 
+<table>
+  <% @goods.each do |good| %>
+  <tr>
+    <td><%= good.code %></td>
+    <td><%= link_to(good.name, good_path(id: good.id)) %></td>
+    <td><%= link_to('Edit', edit_good_path(id: good.id)) %></td>
+
+    <td><%= link_to('Delete', good_path(id: good.id), method: :delete) %></td>
+  </tr>
+  <% end %>
+</table>
+
+<br>
+ <%= link_to('Добавить товар', new_good_path) %>

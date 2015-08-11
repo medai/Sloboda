@@ -1,0 +1,9 @@
+<%= form_for @good do |form| %>
+	<%= form.label :code,'Код' %>
+	<%= form.text_field :code %>
+	</tr>
+	<%= form.label :name,'Название' %>
+	<%= form.text_field :name %>
+	</tr>
+	<%= form.submit 'Сохранить' %>
+<% end %> 
